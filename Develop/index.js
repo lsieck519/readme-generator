@@ -57,21 +57,21 @@ const promptUser = () => {
 
 
 const generateMarkdown = ({title, description, installation, usage, license, contributing, tests, email, username}) =>
-   `${title}
+   `# ${title}
 
-   [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)]
+   ![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)
    (https://opensource.org/licenses/${license})
 
     ## Description 
     ${description}
 
     ## Table of Contents
-    * [Installation Instructions] (#installation)
-    * [Usage Information] (#usage)
-    * [Contribution Guidelines] (#contributing)
-    * [Testing Instructions] (#tests)
-    * [License] (#license)
-    * [Questions] (#email)
+    - [Installation Instructions] (#installation)
+    - [Usage Information] (#usage)
+    - [Contribution Guidelines] (#contributing)
+    - [Testing Instructions] (#tests)
+    - [License] (#license)
+    - [Questions] (#email)
 
   
     ## Installation 
