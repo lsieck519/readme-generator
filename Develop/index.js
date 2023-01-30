@@ -1,5 +1,6 @@
 
 // Include packages needed for this application
+const { create } = require('domain');
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 
@@ -30,7 +31,7 @@ const promptUser = () => {
     type: 'list',
     name: 'license',
     message: 'Select a license, if applicable',
-    choices: ['MIT'],
+    choices: ['MIT','Apache 2.0','Mozilla Public 2.0'],
   },
   {
     type: 'input',
@@ -56,11 +57,31 @@ const promptUser = () => {
 };
 
 
-const generateMarkdown = ({title, description, installation, usage, license, contributing, tests, email, username}) =>
+// function renderLicenseBadge(license) {}
+// function renderLicenseLink(license) {}
+// function renderLicenseSection(license) {}
+
+  //License badge 
+  const createBadge = (license) => {
+    switch (license) {
+    case 'Apache 2.0':
+      badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      break;
+    case 'MIT':
+      badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      break;
+    case 'Mozilla Public 2.0':
+      badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+      break;
+    default:
+      break;
+  }
+}
+
+const generateMarkdown = ({title, badge, description, installation, usage, license, contributing, tests, email, username}) =>
    `# ${title}
 
-   ![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)
-   (https://opensource.org/licenses/${license})
+   ${badge}
 
     ## Description 
     ${description}
@@ -73,7 +94,6 @@ const generateMarkdown = ({title, description, installation, usage, license, con
     - [License] (#license)
     - [Questions] (#email)
 
-  
     ## Installation 
     ${installation}
   
@@ -98,7 +118,7 @@ const generateMarkdown = ({title, description, installation, usage, license, con
 
 const init = () => {
     promptUser()
-      .then((answers) => writeFile('README.md', generateMarkdown(answers)))
+      .then((answers) => writeFile('README.md', generateMarkdown(answers), createBadge()))
       .then(() => console.log('Successfully created readme'))
       .catch((err) => console.error(err));
   };
