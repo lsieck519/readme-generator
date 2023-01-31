@@ -1,6 +1,6 @@
 # Node JS README Generator 
 
-[License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
+![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
 
 ## Description 
 I created a README generator to that I can quickly create a professional README for a new project. 
