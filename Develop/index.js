@@ -71,8 +71,8 @@ ${description}
 * [License](#license)
 * [Questions](#email)
 
- ## Installation 
- ${installation}
+## Installation 
+${installation}
   
 ## Usage 
 ${usage}
@@ -88,8 +88,8 @@ ${tests}
 https://opensource.org/licenses/${license}
 
 ## Questions
-- Email: ${email}
-- GitHub: https://github.com/${username}
+Email: ${email}
+[GitHub](https://github.com/${username})
 
 `;
   
