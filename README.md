@@ -36,6 +36,12 @@ Clone this repository to your terminal and then use `npm init -y` and `npm i` to
 ## Usage 
 Use this to create a README.md. See the video below for demonstration
 
+
+
+https://user-images.githubusercontent.com/99048123/215819269-40e7d860-c7ff-4203-9d11-e229932fbdaa.mov
+
+
+
 ## License 
 ![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
 
