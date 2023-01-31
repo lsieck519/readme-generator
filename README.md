@@ -1,7 +1,7 @@
 # Node JS README Generator 
 
 
-![License Badge](https://img.shields.io/static/v1?label=License&message=${MIT}&color=blue)
+![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
 
 ## Description 
     
