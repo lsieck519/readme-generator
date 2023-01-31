@@ -69,7 +69,7 @@ ${description}
 * [Contribution](#contributing)
 * [Testing](#tests)
 * [License](#license)
-* [Questions](#email)
+* [Questions](#questions)
 
 ## Installation 
 ${installation}
@@ -84,11 +84,13 @@ ${contributing}
 ${tests}
 
 ## License 
-[License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue)
+![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue)
+
 https://opensource.org/licenses/${license}
 
 ## Questions
 Email: ${email}
+
 [GitHub](https://github.com/${username})
 
 `;
