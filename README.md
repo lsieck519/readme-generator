@@ -38,6 +38,7 @@ Use this to create a README.md. See the video below for demonstration
 
 ## License 
 ![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
+
 [License Information](https://opensource.org/licenses/MIT) 
 
 ## Questions
